@@ -4,16 +4,22 @@ import { useState } from "react";
 
 const experience = [
     {
-        role: "Software & AI Engineering Intern",
-        company: "TechtoGreen Drone & Robotics",
-        period: "Dec 2024 — Aug 2026",
+        role: "AI/ML and Computer Vision Intern",
+        company: "TechtoGreen Drone & Robotics Private Limited",
+        period: "Dec 2024 — May 2026",
         description: "Deployed edge AI models and engineered dual-model vision pipelines using VGGT monocular depth estimation and YOLO segmentation. Integrated YDLIDAR G2 sensors and managed MAVLink telemetry via FastAPI.",
     },
     {
         role: "Technical Team Member",
-        company: "The Machine Learning Club",
-        period: "2026 — Present",
+        company: "The Machine Learning CLUB VITAP",
+        period: "Sep 2024 — May 2025",
         description: "Collaborating on AI initiatives and technical frameworks within the VIT-AP University developer community.",
+    },
+    {
+        role: "Project Team Member",
+        company: "The Machine Learning CLUB VITAP",
+        period: "Oct 2023 — Sep 2024",
+        description: "Contributed to project bootcamps and developed applications utilizing Tkinter and Pandas.",
     },
 ];
 
