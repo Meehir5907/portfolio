@@ -43,17 +43,21 @@ export default function Home() {
                 <div className="flex flex-col gap-10">
                     {projects.map((project, index) => (
                         <article key={index} className="group flex flex-col items-start">
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 font-medium text-zinc-100 hover:text-white transition-colors"
-                            >
-                                {project.title}
-                                <span className="text-zinc-600 transition-transform group-hover:translate-x-1 group-hover:text-zinc-300 text-sm">
-                                    ↗
-                                </span>
-                            </a>
+                            {project.link ? (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 font-medium text-zinc-100 hover:text-white transition-colors"
+                                >
+                                    {project.title}
+                                    <span className="text-zinc-600 transition-transform group-hover:translate-x-1 group-hover:text-zinc-300 text-sm">
+                                        ↗
+                                    </span>
+                                </a>
+                            ) : (
+                                <h3 className="font-medium text-zinc-100">{project.title}</h3>
+                            )}
                             <p className="text-sm text-zinc-400 mt-1 mb-3">{project.subtitle}</p>
                             <p className="text-sm text-zinc-500 leading-relaxed">
                                 {project.description}
