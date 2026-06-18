@@ -1,3 +1,18 @@
+const experience = [
+    {
+        role: "Software & AI Engineering Intern",
+        company: "TechtoGreen Drone & Robotics",
+        period: "Dec 2024 — Aug 2026",
+        description: "Deployed edge AI models and engineered dual-model vision pipelines using VGGT monocular depth estimation and YOLO segmentation. Integrated YDLIDAR G2 sensors and managed MAVLink telemetry via FastAPI.",
+    },
+    {
+        role: "Technical Team Member",
+        company: "The Machine Learning Club",
+        period: "2026 — Present",
+        description: "Collaborating on AI initiatives and technical frameworks within the VIT-AP University developer community."
+    },
+];
+
 const projects = [
     {
         title: "Chakshu",
@@ -36,6 +51,26 @@ export default function Home() {
                     Computer Vision & Software Engineer building edge AI, dual-model vision pipelines, and multi-channel SIEM frameworks.
                 </p>
             </header>
+
+            <section className="mb-20">
+                <h2 className="text-xl font-medium mb-8 text-zinc-200">Experience</h2>
+
+                <div className="flex flex-col gap-10">
+                    {experience.map((job, index) => (
+                        <article key={index} className="flex flex-col items-start">
+                            <h3 className="font-medium text-zinc-100">{job.role}</h3>
+                            <div className="flex items-center gap-2 text-sm text-zinc-400 mt-1 mb-3">
+                                <span>{job.company}</span>
+                                <span>&middot;</span>
+                                <span>{job.period}</span>
+                            </div>
+                            <p className="text-sm text-zinc-500 leading-relaxed">
+                                {job.description}
+                            </p>
+                        </article>
+                    ))}
+                </div>
+            </section>
 
             <section>
                 <h2 className="text-xl font-medium mb-8 text-zinc-200">Selected Work</h2>
