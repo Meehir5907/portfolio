@@ -22,7 +22,7 @@ export default function TabNavigation({ activeTab, setActiveTab }: TabProps) {
                     : "text-zinc-500 hover:text-zinc-300"
                     }`}
             >
-                Selected Work
+                Projects
             </button>
         </div>
     );
