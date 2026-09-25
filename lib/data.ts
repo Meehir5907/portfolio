@@ -28,7 +28,7 @@ export const projects = [
         subtitle: "Real-time crop disease detection pipeline",
         description: "Engineered a YOLO and OpenCV pipeline processing live drone feeds. Integrated MAVLink telemetry, VITS offline TTS, and a multi-threaded PyQt6 GUI.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -36,7 +36,7 @@ export const projects = [
         subtitle: "FastAPI PDF generation system",
         description: "Developed a dynamic PDF report generation system with fpdf2, featuring i18n for English/Telugu and custom text shaping for cross-platform rendering.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -44,7 +44,7 @@ export const projects = [
         subtitle: "YOLO-based tracking and compliance",
         description: "Built a real-time SKU counting system with custom NMS. Developed safety pipelines combining YOLOv8 and MediaPipe Pose for ergonomic posture and hardhat compliance.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -52,7 +52,7 @@ export const projects = [
         subtitle: "Vision and navigation pipeline",
         description: "Engineered YOLO-based obstacle classification and integrated a YDLIDAR G2 sensor via custom C++ application for 360-degree point cloud data.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research", "Hardware"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -60,7 +60,7 @@ export const projects = [
         subtitle: "Monocular depth and segmentation",
         description: "Combined VGGT depth estimation and YOLO instance segmentation. Implemented Trimesh point-cloud generation to convert predictions into interactive GLB environments.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -68,7 +68,7 @@ export const projects = [
         subtitle: "AI security and threat detection",
         description: "Integrated YOLO weapon detection and DeepFace facial recognition. Built a Person of Interest tracking pipeline with ArcFace and FAISS vector similarity search.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research", "Hardware"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -76,7 +76,7 @@ export const projects = [
         subtitle: "Unsupervised anomaly detection",
         description: "Applied DBSCAN clustering on FT-IR spectra. Built a custom computer vision feature extractor fusing Hue/Saturation histograms and LBP texture maps.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -84,7 +84,7 @@ export const projects = [
         subtitle: "6-DOF camera pose estimation",
         description: "Developed a monocular VO system with ORB feature extraction and FLANN matching. Built a SLAM architecture using StereoSGBM and Lucas-Kanade optical flow.",
         link: "",
-        categoryId: "Applied Research",
+        categoryIds: ["Applied Research"],
         relatedExperienceId: "tg-intern",
     },
     {
@@ -92,7 +92,7 @@ export const projects = [
         subtitle: "Godot Engine Survival Game",
         description: "Engineered a 3D survival game using GDScript with dynamic enemy AI, spatial pathfinding, and state-persistent UI overlays.",
         link: "https://github.com/MLC-VIT-AP/PAC_3D",
-        categoryId: "Game Development",
+        categoryIds: ["Game Development"],
         relatedExperienceId: "ml-project",
     },
     {
@@ -100,7 +100,7 @@ export const projects = [
         subtitle: "AI-driven SIEM Framework",
         description: "Log ingestion and multi-channel protocol threat correlation featuring custom synthetic host telemetry generation.",
         link: "https://github.com/Meehir5907/Chakshu",
-        categoryId: "Personal",
+        categoryIds: ["Personal"],
         relatedExperienceId: null,
     },
     {
@@ -108,7 +108,7 @@ export const projects = [
         subtitle: "N-Channel Transformer Model",
         description: "PyTorch-based architecture designed for classifying malicious network packets within the CTU-13 dataset.",
         link: "https://github.com/Meehir5907/Sharvara",
-        categoryId: "Personal",
+        categoryIds: ["Personal"],
         relatedExperienceId: null,
     },
     {
@@ -116,7 +116,7 @@ export const projects = [
         subtitle: "Dual N-Back Engine",
         description: "C++/Qt and QML implementation of the working memory game with dynamic UI components and CMake build configuration.",
         link: "https://github.com/Meehir5907/MemoRe",
-        categoryId: "Personal",
+        categoryIds: ["Personal"],
         relatedExperienceId: null,
     },
     {
@@ -124,7 +124,7 @@ export const projects = [
         subtitle: "Hardware Prototype",
         description: "Wearable system featuring heads-up captioning, MEMS microphone arrays, and local edge AI processing.",
         link: "",
-        categoryId: "Hardware",
+        categoryIds: ["Hardware"],
         relatedExperienceId: null,
     },
 ];
