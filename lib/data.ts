@@ -92,7 +92,7 @@ export const projects = [
         subtitle: "Godot Engine Survival Game",
         description: "Engineered a 3D survival game using GDScript with dynamic enemy AI, spatial pathfinding, and state-persistent UI overlays.",
         link: "https://github.com/MLC-VIT-AP/PAC_3D",
-        categoryIds: ["Game Development"],
+        categoryIds: ["Game"],
         relatedExperienceId: "ml-project",
     },
     {
@@ -116,7 +116,7 @@ export const projects = [
         subtitle: "Dual N-Back Engine",
         description: "C++/Qt and QML implementation of the working memory game with dynamic UI components and CMake build configuration.",
         link: "https://github.com/Meehir5907/MemoRe",
-        categoryIds: ["Personal"],
+        categoryIds: ["Personal", "Game"],
         relatedExperienceId: null,
     },
     {
