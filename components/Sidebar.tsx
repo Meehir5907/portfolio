@@ -24,6 +24,21 @@ export default function Sidebar() {
                 >
                     ↗ LinkedIn
                 </a>
+                < a
+                    href="https://cdn.jsdelivr.net/gh/Meehir5907/ResumeAndCV@main/CV/Meehir_s_CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-zinc-100 transition-colors inline-flex items-center gap-1.5 w-fit">
+                    ↗ CV
+                </a>
+                < a
+                    href="https://cdn.jsdelivr.net/gh/Meehir5907/ResumeAndCV@main/Resume/Generic/Meehir_s_Resume_Generic.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-zinc-100 transition-colors inline-flex items-center gap-1.5 w-fit"
+                >
+                    ↗ Resume
+                </a>
             </div>
         </header>
     );
