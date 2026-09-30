@@ -9,8 +9,8 @@ export default function ContentArea() {
     const [activeTab, setActiveTab] = useState<"experience" | "projects">("experience");
 
     return (
-        <section className="md:w-2/3 flex flex-col relative">
-            <div className="md:sticky md:top-16 z-10 w-fit mb-8">
+        <section className="flex flex-col relative w-full">
+            <div className="md:sticky md:top-8 z-10 w-full mb-8">
                 <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
             </div>
             <div className="px-2 md:px-4">

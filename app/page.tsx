@@ -3,9 +3,11 @@ import ContentArea from "@/components/ContentArea";
 
 export default function Home() {
     return (
-        <main className="max-w-6xl mx-auto p-4 md:p-8 pt-8 md:pt-16 flex flex-col md:flex-row gap-6 md:gap-12">
+        <main className="max-w-7xl mx-auto p-4 md:p-8 flex flex-col md:flex-row gap-8 md:gap-16 min-h-screen items-start">
             <Sidebar />
-            <ContentArea />
+            <div className="flex-1 w-full max-w-3xl flex flex-col">
+                <ContentArea />
+            </div>
         </main>
     );
 }
