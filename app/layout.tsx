@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://meehir.vercel.app"),
@@ -28,9 +29,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className="antialiased min-h-screen font-sans">
-                {children}
+        <html lang="en" suppressHydrationWarning>
+            <body className="antialiased min-h-screen font-sans selection:bg-accent selection:text-white">
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

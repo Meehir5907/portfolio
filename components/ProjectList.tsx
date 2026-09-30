@@ -49,15 +49,15 @@ export default function ProjectList() {
             );
 
     return (
-        <div className="flex flex-col gap-8 -mt-6 animate-in fade-in duration-500">
+        <div className="flex flex-col gap-8 animate-in fade-in duration-500">
             <div className="flex justify-start">
                 <select
                     value={filterMode}
                     onChange={(e) => changeMode(e.target.value as FilterMode)}
-                    className="bg-zinc-900/50 text-zinc-400 text-xs font-medium rounded-md px-2 py-1.5 border border-zinc-800/50 focus:outline-none focus:border-zinc-700 cursor-pointer"
+                    className="bg-canvas text-muted text-xs font-medium rounded-md px-2 py-1.5 border border-shell-border focus:outline-none focus:border-accent cursor-pointer"
                 >
                     {MODES.map((mode) => (
-                        <option key={mode.id} value={mode.id} className="bg-zinc-900">
+                        <option key={mode.id} value={mode.id} className="bg-canvas">
                             {mode.label}
                         </option>
                     ))}
@@ -67,9 +67,9 @@ export default function ProjectList() {
             <div className="flex flex-wrap gap-2 -mt-4">
                 <button
                     onClick={() => setActiveCats(new Set())}
-                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${activeCats.size === 0
-                        ? "bg-zinc-800 text-zinc-100"
-                        : "bg-zinc-900/50 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50"
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors border border-shell-border ${activeCats.size === 0
+                        ? "bg-accent text-[var(--accent-fg)] border-accent"
+                        : "bg-canvas text-muted hover:text-primary hover:border-accent"
                         }`}
                 >
                     All
@@ -78,9 +78,9 @@ export default function ProjectList() {
                     <button
                         key={index}
                         onClick={() => toggleCat(cat)}
-                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${activeCats.has(cat)
-                            ? "bg-zinc-800 text-zinc-100"
-                            : "bg-zinc-900/50 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50"
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors border border-shell-border ${activeCats.has(cat)
+                            ? "bg-accent text-[var(--accent-fg)] border-accent"
+                            : "bg-canvas text-muted hover:text-primary hover:border-accent"
                             }`}
                     >
                         {cat}
@@ -88,7 +88,7 @@ export default function ProjectList() {
                 ))}
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 mt-2">
                 {visibleProj.map((proj, index) => (
                     <article key={index} className="group flex flex-col items-start">
                         {proj.link ? (
@@ -96,18 +96,18 @@ export default function ProjectList() {
                                 href={proj.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 font-medium text-zinc-100 hover:text-white transition-colors"
+                                className="inline-flex items-center gap-1.5 font-medium text-primary hover:text-accent transition-colors"
                             >
                                 {proj.title}
-                                <span className="text-zinc-600 transition-transform group-hover:translate-x-1 group-hover:text-zinc-300 text-sm">
+                                <span className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent text-sm">
                                     ↗
                                 </span>
                             </a>
                         ) : (
-                            <h3 className="font-medium text-zinc-100">{proj.title}</h3>
+                            <h3 className="font-medium text-primary">{proj.title}</h3>
                         )}
-                        <p className="text-sm text-zinc-400 mt-1 mb-3">{proj.subtitle}</p>
-                        <p className="text-sm text-zinc-500 leading-relaxed">
+                        <p className="text-sm text-muted mt-1 mb-3">{proj.subtitle}</p>
+                        <p className="text-sm text-muted leading-relaxed">
                             {proj.description}
                         </p>
                     </article>

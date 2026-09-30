@@ -31,31 +31,31 @@ export default function ExperienceList() {
                             className={`flex items-center gap-2 ${hasProj ? "cursor-pointer group" : ""}`}
                             onClick={() => hasProj && toggleJob(job.id)}
                         >
-                            <h3 className="font-medium text-zinc-100 group-hover:text-white transition-colors">
+                            <h3 className="font-medium text-primary group-hover:text-accent transition-colors">
                                 {job.role}
                             </h3>
                             {hasProj && (
-                                <span className={`text-zinc-500 text-sm transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}>
+                                <span className={`text-muted text-sm transition-transform duration-300 ${isExpanded ? "rotate-90 text-accent" : ""}`}>
                                     &gt;
                                 </span>
                             )}
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-zinc-400 mt-1 mb-3">
+                        <div className="flex items-center gap-2 text-sm text-muted mt-1 mb-3">
                             <span>{job.company}</span>
                             <span>&middot;</span>
                             <span>{job.period}</span>
                         </div>
-                        <p className="text-sm text-zinc-500 leading-relaxed">
+                        <p className="text-sm text-muted leading-relaxed">
                             {job.description}
                         </p>
-                        
+
                         {hasProj && (
                             <div className={`grid transition-all duration-300 ease-in-out w-full ${isExpanded ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}>
-                                <div className="overflow-hidden flex flex-col gap-4 border-l border-zinc-800/50 pl-4 ml-1">
+                                <div className="overflow-hidden flex flex-col gap-4 border-l border-shell-border pl-4 ml-1">
                                     {relatedProj.map((proj, projIndex) => (
                                         <div key={projIndex} className="flex flex-col">
-                                            <h4 className="text-sm font-medium text-zinc-300">{proj.title}</h4>
-                                            <p className="text-xs text-zinc-500 mt-0.5">{proj.subtitle}</p>
+                                            <h4 className="text-sm font-medium text-primary">{proj.title}</h4>
+                                            <p className="text-xs text-muted mt-0.5">{proj.subtitle}</p>
                                         </div>
                                     ))}
                                 </div>

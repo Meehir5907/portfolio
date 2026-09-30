@@ -1,6 +1,92 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-canvas: var(--bg-canvas);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-primary: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-shell-border: var(--border-shell);
+}
+
+:root {
+  --bg-canvas: #ffffff;
+  --accent: #f97316;
+  --accent-fg: #ffffff; /* White text on dark orange */
+  
+  --text-primary: #1c1917; 
+  --text-muted: #57534e;   
+  
+  --border-shell: rgba(255, 90, 0, 0.3);
+
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 120, 0, 0.25) 15%, rgba(255, 70, 0, 0.15) 100%); 
+  --glass-border-tl: rgba(255, 255, 255, 0.9); 
+  --glass-border-br: rgba(255, 80, 0, 0.5); 
+  
+  --glass-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 1),      
+    inset -1px -1px 5px rgba(255, 80, 0, 0.4),     
+    18px 28px 12px -6px rgba(255, 90, 0, 0.35),    
+    10px 16px 4px -4px rgba(255, 50, 0, 0.25),     
+    0 4px 12px -2px rgba(0, 0, 0, 0.04);           
+    
+  --text-glass: #431407;
+  --text-glass-muted: #9a3412;
+  --glass-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  --bg-canvas: #09090b;
+  --accent: #d8b4fe;
+  --accent-fg: #09090b; /* Black text on neon purple for legibility */
+  
+  --text-primary: #fafafa;
+  --text-muted: #a1a1aa;
+  
+  --border-shell: rgba(216, 180, 254, 0.4);
+
+  --glass-bg: rgba(147, 51, 234, 0.15);
+  --glass-border-tl: rgba(233, 143, 255, 0.85);
+  --glass-border-br: rgba(147, 51, 234, 0.4);
+  
+  --glass-shadow:
+    inset 0 0 40px rgba(168, 85, 247, 0.4),       
+    inset 1px 1px 4px rgba(233, 143, 255, 0.9),     
+    15px 25px 40px -10px rgba(0, 0, 0, 0.9),       
+    0 0 80px rgba(147, 51, 234, 0.45),
+    20px 30px 100px rgba(168, 85, 247, 0.3);  
+    
+  --text-glass: #ffffff;
+  --text-glass-muted: #e9d5ff;
+  --glass-text-shadow: 0 0 8px rgba(216, 180, 254, 0.8), 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
 body {
-    background-color: #0f0f0f;
-    color: #e5e5e5;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-panel {
+  --text-primary: var(--text-glass);
+  --text-muted: var(--text-glass-muted);
+  
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-top: 1px solid var(--glass-border-tl);
+  border-left: 1px solid var(--glass-border-tl);
+  border-bottom: 1px solid var(--glass-border-br);
+  border-right: 1px solid var(--glass-border-br);
+  box-shadow: var(--glass-shadow);
+  text-shadow: var(--glass-text-shadow);
+}
+
+/* Global High-Contrast Selection */
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+  text-shadow: none; /* Removes the emissive neon glow so text remains crisp when highlighted */
 }
