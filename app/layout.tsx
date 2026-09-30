@@ -30,8 +30,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="antialiased min-h-screen font-sans selection:bg-accent selection:text-white">
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <body className="antialiased min-h-screen font-sans">
+                <ThemeProvider>
                     {children}
                 </ThemeProvider>
             </body>
