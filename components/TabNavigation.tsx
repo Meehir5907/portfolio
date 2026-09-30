@@ -1,3 +1,5 @@
+import ThemeSwitch from "./ThemeSwitch";
+
 type TabProps = {
     activeTab: "experience" | "projects";
     setActiveTab: (tab: "experience" | "projects") => void;
@@ -5,7 +7,7 @@ type TabProps = {
 
 export default function TabNavigation({ activeTab, setActiveTab }: TabProps) {
     return (
-        <div className="glass-panel rounded-full px-6 py-3 w-full flex items-center">
+        <div className="glass-panel rounded-full px-6 py-3 w-full flex items-center justify-between">
             <div className="inline-flex gap-8 w-fit">
                 <button
                     onClick={() => setActiveTab("experience")}
@@ -26,6 +28,8 @@ export default function TabNavigation({ activeTab, setActiveTab }: TabProps) {
                     Projects
                 </button>
             </div>
+
+            <ThemeSwitch />
         </div>
     );
 }

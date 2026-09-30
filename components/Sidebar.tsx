@@ -1,13 +1,8 @@
-import ThemeToggle from "./ThemeToggle";
-
 export default function Sidebar() {
     return (
         <header className="w-full md:w-[360px] lg:w-[400px] shrink-0 glass-panel p-8 rounded-[2rem] md:sticky md:top-8 h-fit md:h-[calc(100vh-4rem)] flex flex-col justify-between relative z-20">
             <div>
-                <div className="absolute top-8 right-8">
-                    <ThemeToggle />
-                </div>
-                <h1 className="text-3xl font-semibold mb-4 text-primary pr-12">
+                <h1 className="text-3xl font-semibold mb-4 text-primary pr-4">
                     Meehir Prabhakar
                 </h1>
                 <p className="text-muted leading-relaxed mb-8">
