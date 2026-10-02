@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://meehir.vercel.app"),
@@ -33,6 +34,7 @@ export default function RootLayout({
             <body className="antialiased min-h-screen font-sans">
                 <ThemeProvider>
                     {children}
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>
