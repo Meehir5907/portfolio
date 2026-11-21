@@ -119,4 +119,12 @@ export const projects = [
         categoryIds: ["Personal", "Game"],
         relatedExperienceId: null,
     },
+    {
+        title: "AR Accessibility Smart Glasses",
+        subtitle: "Hardware Prototype",
+        description: "Wearable system featuring heads-up captioning, MEMS microphone arrays, and local edge AI processing.",
+        link: "",
+        categoryIds: ["Computer Vision", "Hardware"],
+        relatedExperienceId: null,
+    },
 ];
